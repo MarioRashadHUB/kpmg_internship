@@ -12,9 +12,9 @@ pd.options.display.max_columns = None
 pd.options.display.max_rows = None
 
 # imports all three datasets
-df_demograph = pd.read_csv('cust_demograph.csv')
-df_address = pd.read_csv('customer_address.csv')
-df_trans = pd.read_csv('transactions.csv')
+df_demograph = pd.read_csv('customer_demgraph.csv')
+df_address = pd.read_csv('customer_addresses.csv')
+df_trans = pd.read_csv('customer_transactions.csv')
 
 # drops all duplicate values
 df_demograph.drop_duplicates(keep=False, inplace=True)
@@ -44,11 +44,15 @@ df_trans.isnull().sum()
 df_demograph.isnull().sum() / df_demograph.shape[0]
 df_trans.isnull().sum() / df_trans.shape[0]
 
-df.drop_duplicates(keep=False, inplace=True)
-
 
 df_address.customer_id.value_counts()
 df_address.address.value_counts()
 df_address.postcode.value_counts()
 df_address.state.value_counts()
 df_address.country.value_counts()
+
+df_demograph.customer_id.value_counts()
+df_demograph.gender.value_counts()
+df_demograph.job_title.value_counts()
+
+df_trans.order_status.value_counts()
