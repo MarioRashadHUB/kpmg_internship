@@ -13,6 +13,6 @@ import pandas as pd
 pd.options.display.max_columns = None
 pd.options.display.max_rows = None
 
-# importing all new data
+# importing all new recieved data
 df = pd.read_csv('new_cust_list.csv')
 
