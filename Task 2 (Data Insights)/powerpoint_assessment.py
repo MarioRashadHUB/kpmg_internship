@@ -28,9 +28,8 @@ df_targetCust = df[df['25_plus'] == True]
 df_targetCust['25_plus'].value_counts()
 
 # removes all cusomers who do not own a car
-df_targetCust = df[df['owns_car'] == 'No']
+df_targetCust = df_targetCust[df_targetCust['owns_car'] == 'No']
 df_targetCust.owns_car.value_counts()
-
 
 # removes all customers with no DOB
 df_targetCust.dropna(subset = ["DOB"], inplace=True)
